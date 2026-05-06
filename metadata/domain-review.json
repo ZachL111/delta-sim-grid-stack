@@ -1,0 +1,73 @@
+{
+  "repo": "delta-sim-grid-stack",
+  "language": "C#",
+  "category": "Simulations",
+  "goal": "Create a C# reference implementation for grid workflows, centered on security rule linting, safe and unsafe fixtures, and remediation hints.",
+  "review_model": {
+    "terms": [
+      "input pressure",
+      "state drift",
+      "review cost",
+      "decision risk"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "input pressure",
+      "signal": 64,
+      "slack": 33,
+      "drag": 19,
+      "confidence": 54,
+      "score": 158,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "state drift",
+      "signal": 51,
+      "slack": 29,
+      "drag": 26,
+      "confidence": 47,
+      "score": 100,
+      "lane": "hold"
+    },
+    {
+      "name": "edge",
+      "focus": "review cost",
+      "signal": 72,
+      "slack": 31,
+      "drag": 21,
+      "confidence": 58,
+      "score": 170,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "decision risk",
+      "signal": 62,
+      "slack": 53,
+      "drag": 11,
+      "confidence": 73,
+      "score": 217,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "input pressure",
+      "signal": 69,
+      "slack": 50,
+      "drag": 30,
+      "confidence": 52,
+      "score": 150,
+      "lane": "ship"
+    }
+  ]
+}
