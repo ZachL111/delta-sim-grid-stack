@@ -1,0 +1,17 @@
+{
+  "repo": "delta-sim-grid-stack",
+  "thresholds": {
+    "signal": 2,
+    "slack": 1,
+    "confidence": 2,
+    "drag": 5,
+    "ship": 159,
+    "watch": 103
+  },
+  "terms": [
+    "input pressure",
+    "state drift",
+    "review cost",
+    "decision risk"
+  ]
+}
